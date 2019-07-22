@@ -4,23 +4,22 @@ import { increment, decrement } from '../actions';
 
 class Counter extends React.Component {
     incrementIfOdd = () => {
-        // Stretch Problem: Implement an increment function that
-        // only increments if the counter value is odd
+       
     };
 
     incrementAsync = () => {
-        // Stretch Problem: Implement an increment function that
-        // increments after waiting for one second
+        
     };
 
     render() {
         return (
+            //After importing our actions functions from actions We call this functions as click events
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => { const newCount = props.count + 1}}>
+                <button onClick={() => { this.props.increment()}}>
                     +
                 </button>
-                <button onClick={() => {/* Fill me in */ }}>
+                <button onClick={() => {this.props.decrement()}}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
