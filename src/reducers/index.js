@@ -1,6 +1,8 @@
 import { INCREMENT, DECREMENT } from '../actions';
 
-//Reducer is were We set our initial state and it is also where our state gets updated based in the action We are triggerin. 
+//Reducer is were We set our initial state and it is also where our state gets updated based in the action We are triggerin.
+//In the example from codesandbox it is showing the decrement as 
+// count: state.count - action.payload. This will result is adding to the counter since - + - = + 
 
 
 const initialState = {

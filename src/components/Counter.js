@@ -4,7 +4,9 @@ import { increment, decrement } from '../actions';
 
 class Counter extends React.Component {
     incrementIfOdd = () => {
-       
+       if (this.props.count % 2 !== 0) {
+           this.props.increment()
+       }
     };
 
     incrementAsync = () => {
@@ -22,14 +24,12 @@ class Counter extends React.Component {
                 <button onClick={() => {this.props.decrement()}}>
                     -
                 </button>
-                 {/* Uncomment these button tags if you got
-                around to implementing the extra credit functions */}
-                {/* <button onClick={this.incrementIfOdd}>
+                {<button onClick={this.incrementIfOdd}>
                     Increment if odd
-                </button>
-                <button onClick={this.incrementAsync}>
+                </button>}
+                {/* <button onClick={this.incrementAsync}>
                     Increment async
-                </button>  */}
+                </button> */}
             </p>
         );
     }
